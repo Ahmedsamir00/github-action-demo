@@ -19,6 +19,25 @@ jobs:
     steps:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+          Run tests
+      - name: Run tests
+        run: npm test
+        - name: Build
+        run: npm run build
+      - name: Deploy
+
         run: |
           cd /home/ubuntu/github-action/github-action-demo/actions-runner
-          cat run.sh
+          ls 
+          - name: Send notification
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          slack-message: 'Build completed successfully.'
+          slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+
