@@ -20,5 +20,7 @@ jobs:
       - name: Set up Node.js
 
         run: |
-         sudo apt install Nodejs
+         cd /home/ubuntu/github-action/github-action-demo/actions-runner
+         ls
+         
         
