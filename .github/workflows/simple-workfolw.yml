@@ -35,9 +35,4 @@ jobs:
         run: |
           cd /home/ubuntu/github-action/github-action-demo/actions-runner
           ls 
-          - name: Send notification
-        uses: slackapi/slack-github-action@v1.23.0
-        with:
-          slack-message: 'Build completed successfully.'
-          slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-
+        
