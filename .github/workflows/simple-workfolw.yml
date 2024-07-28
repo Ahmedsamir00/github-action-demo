@@ -20,5 +20,5 @@ jobs:
       - name: Set up Node.js
 
         run: |
-         apt-get install Nodejs
+         sudo apt install Nodejs
         
